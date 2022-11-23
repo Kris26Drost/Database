@@ -1,0 +1,20 @@
+@import './bscustomizing';
+
+
+// Font
+$f_main: Arial, Helvetica, sans-serif;
+$f_head: "Spinnaker", Helvetica, sans-serif;
+
+body {
+	margin: 0;
+	font-family: $f_head;
+}
+
+.img-cover {
+	width: 100%;
+	object-fit: cover;
+	// overflow: hidden;
+	background-color: yellow;
+}
+
+
