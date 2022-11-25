@@ -28,7 +28,8 @@ const Users = () => {
 
     return (
         <div className='Users container'>
-            <div className='row row-cols-1 row-cols-md-4 g-2'>
+
+            <div >
 
                 {/* <h1>Users</h1> */}
 

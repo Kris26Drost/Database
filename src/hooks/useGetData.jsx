@@ -10,11 +10,12 @@ export const useGetData = () => {
     const [loading, setLoading] = useState(false)
     //use 'Tab' to go faster to the 2nd point 'useState(*)'
 
-    const getData = (url) => {
+    const getData = (url, h = null, p = null) => {
 
         setLoading(true)
+        // setData() doesnt show the data will you wait for the other data when clicking prev or next buttons
 
-        axios.get(url)
+        axios.get(url, {headers: h, params: p})
         .then( res => {console.log(res.data)
             setData(res.data)
             setError(false)

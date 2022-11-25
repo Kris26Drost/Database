@@ -28,7 +28,7 @@ const Species = () => {
 
     return (
         <div className='Species container'>
-            <div className='row row-cols-1 row-cols-md-4 g-2'>
+            <div>
 
                 {/* <h1>Species</h1> */}
                 <Title headline='Species'/>
