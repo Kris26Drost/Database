@@ -9,6 +9,11 @@ import Starships from './pages/swapi/Starship';
 import News from './pages/news/News';
 import NotMatch from './pages/NotMatch';
 import Hobbies from './pages/rapidapi/Hobbies';
+import Pokemon from './pages/rapidapi/Pokemon';
+import Facts from './pages/rapidapi/Facts';
+import LoveCalculator from './pages/rapidapi/LoveCalculator';
+import Weather1 from './pages/weather/Weather1';
+import Weather2 from './pages/weather/Weather2';
 
 function App() {
   return (
@@ -22,10 +27,18 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/user' element={<Users />}/>
+
           <Route path='/species' element={<Species/>}/>
           <Route path='/starships' element={<Starships/>}/>
+
           <Route path='/news' element={<News/>}/>
           <Route path='/hobbies' element={<Hobbies/>}/>
+          <Route path='/pokemon' element={<Pokemon/>}/>
+          <Route path='/facts' element={<Facts/>}/>
+          <Route path='/lovecalc' element={<LoveCalculator/>}/>
+
+          <Route path='/weather1' element={<Weather1/>}/>
+          <Route path='/weather2' element={<Weather2/>}/>
 
 
           <Route path='*' element={<NotMatch/>} />

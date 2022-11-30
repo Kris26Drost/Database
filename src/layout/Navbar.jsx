@@ -30,27 +30,56 @@ const Navbar = () => {
               <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">SWAPI</span>
 
               <ul className="dropdown-menu">
-                <li> <NavLink  className="dropdown-item" to='/species'>Species</NavLink> </li>
+                <li> <NavLink className="dropdown-item" to='/species'>Species</NavLink> </li>
                 <li><hr className="dropdown-divider" /></li>
-                <li> <NavLink  className="dropdown-item" to='/starships'>Starships</NavLink> </li>
+                <li> <NavLink className="dropdown-item" to='/starships'>Starships</NavLink> </li>
               </ul>
             </li>
 
             <li className="nav-item dropdown">
-              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">NEWS</span>
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">NEWS API</span>
 
               <ul className="dropdown-menu">
-                <li> <NavLink  className="dropdown-item" to='/news'>News</NavLink> </li>
+                <li> <NavLink className="dropdown-item" to='/news'>News</NavLink> </li>
               </ul>
             </li>
 
             <li className="nav-item dropdown">
-              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">HOBBIES</span>
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">RAPID API</span>
 
               <ul className="dropdown-menu">
-                <li> <NavLink  className="dropdown-item" to='hobbies'>Hobbies</NavLink> </li>
+                <li> <NavLink className="dropdown-item" to='hobbies'>Hobbies</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/facts'>Facts</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/lovecalc'>Love Calculator</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/pokemon'>Pokémon</NavLink> </li>
               </ul>
             </li>
+
+            <li className="nav-item dropdown">
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">WEATHER</span>
+
+              <ul className="dropdown-menu">
+                <li> <NavLink className="dropdown-item" to='weather1'>Vejr med postnummer</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/weather2'>Adresseopslag</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/weather'></NavLink> </li>
+              </ul>
+            </li>
+
 
           </ul>
         </div>
