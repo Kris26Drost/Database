@@ -1,0 +1,13 @@
+.Weather2 {
+    .hide {
+        display: none;
+        border: 1px solid green;
+    }
+    .show {
+        display: block;
+        border: 1px solid red;
+        background-color: gray;
+        color: white;
+    }
+
+}
