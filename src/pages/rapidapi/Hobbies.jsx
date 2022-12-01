@@ -27,7 +27,7 @@ const Hobbies = () => {
 
 
     return (
-        <div className='container'>
+        <div className='Hobbies container'>
             <Title headline='Vælg din (tilfældige) hobby' />
 
             {loading && <Loader />}

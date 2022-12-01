@@ -76,7 +76,15 @@ const Navbar = () => {
 
                 <li><hr className="dropdown-divider" /></li>
 
-                <li> <NavLink className="dropdown-item" to='/weather'></NavLink> </li>
+                <li> <NavLink className="dropdown-item" to='/weather3'>Map</NavLink> </li>
+              </ul>
+            </li>
+
+            <li className="nav-item dropdown">
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">OPGAVE EKS.</span>
+
+              <ul className="dropdown-menu">
+                <li> <NavLink className="dropdown-item" to='jokes'>Jokes!</NavLink> </li>
               </ul>
             </li>
 
