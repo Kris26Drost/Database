@@ -15,7 +15,7 @@ import LoveCalculator from './pages/rapidapi/LoveCalculator';
 import Weather1 from './pages/weather/Weather1';
 import Weather2 from './pages/weather/Weather2';
 import Weather3 from './pages/weather/Weather3';
-import Jokes from './pages/eksempel/Jokes';
+import Jokes from './pages/opgave12/Jokes';
 
 function App() {
   return (
