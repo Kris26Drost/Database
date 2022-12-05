@@ -31,7 +31,9 @@ const Navbar = () => {
 
               <ul className="dropdown-menu">
                 <li> <NavLink className="dropdown-item" to='/species'>Species</NavLink> </li>
+
                 <li><hr className="dropdown-divider" /></li>
+
                 <li> <NavLink className="dropdown-item" to='/starships'>Starships</NavLink> </li>
               </ul>
             </li>
@@ -87,6 +89,49 @@ const Navbar = () => {
                 <li> <NavLink className="dropdown-item" to='jokes'>Jokes!</NavLink> </li>
               </ul>
             </li>
+
+            <li className="nav-item dropdown">
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">AIRTABLE</span>
+
+              <ul className="dropdown-menu">
+
+                <li> <NavLink className="dropdown-item" to='/todos'>Todos</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/oprettodo'>CreateTodo</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/rettodo'>TodoEdit</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/admintodo'>TodoAdmin</NavLink> </li>
+              </ul>
+            </li>
+
+            <li className="nav-item dropdown">
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">WILDLIFE</span>
+
+              <ul className="dropdown-menu">
+
+                <li> <NavLink className="dropdown-item" to='/animals'>Animals</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/opretanimal'>CreateAnimal</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/retanimal'>AnimalEdit</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/adminanimal'>AnimalAdmin</NavLink> </li>
+              </ul>
+            </li>
+
 
 
           </ul>

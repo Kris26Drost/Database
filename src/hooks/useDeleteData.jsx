@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 
-export const useGetData = () => {
+export const useDeleteData = () => {
 
     // States til håndtering af data, loading, error
     const [data, setData] = useState()
@@ -10,12 +10,12 @@ export const useGetData = () => {
     const [loading, setLoading] = useState(false)
     //use 'Tab' to go faster to the 2nd point 'useState(*)'
 
-    const getData = (url, h = null, p = null) => {
+    const deleteData = (url, h = null, p = null) => {
 
         setLoading(true)
         // setData() doesnt show the data will you wait for the other data when clicking prev or next buttons
 
-        axios.get(url, { headers: h, params: p })
+        axios.delete(url, { headers: h, params: p })
             .then(res => {
                 console.log(res.data)
                 setData(res.data)
@@ -32,5 +32,5 @@ export const useGetData = () => {
     }
 
     // det der "udbydes" fra hooket her
-    return { getData, error, loading, data }
+    return { deleteData, error, loading, data }
 }
