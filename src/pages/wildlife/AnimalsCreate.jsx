@@ -32,7 +32,13 @@ const AnimalsCreate = () => {
         }
     }, [data])
 
-
+    // "fields": {
+    //     "Animal": "Jaguar",
+    //     "Species": [
+    //       "recbht9X8SR35PY5w"
+    //     ]
+    //   }
+    // },
 
     // Send data til api 
     const handleSubmit = (e) => {
@@ -41,11 +47,12 @@ const AnimalsCreate = () => {
         let ny = {
             "fields": {
                 "Animal": newanimal,
-                "Specie": [
+                "Species": [
                     specie
                 ]
             }
         }
+        console.log(ny)
 
         // send til hook som sender til API
         postData('https://api.airtable.com/v0/appEt2FPO3ormMpjQ/Wildlife', ny,
@@ -82,7 +89,7 @@ const AnimalsCreate = () => {
                         {/* Species u dropdown */ }
                         <div className='mb-3 mt-3'>
                             <label className='form-label me-3'>Vælg en Specie
-                                <select onChange={ e => setSpecie(e.target.value) } className='form-select'>
+                                <select defaultValue='DEFAULT' onChange={ e => setSpecie(e.target.value) } className='form-select'>
                                     <option value='DEFAULT' disabled>Vælg en Specie</option>
                                     {
                                         dataSpecie && dataSpecie.records.map(s =>
