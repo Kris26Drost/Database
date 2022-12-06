@@ -7,6 +7,7 @@ import TodoCard from '../../components/TodoCard';
 
 //import eget hook - som laver request til API
 import { useGetData } from '../../hooks/useGetData';
+
 const Todos = () => {
 
     // request-hook
@@ -16,8 +17,7 @@ const Todos = () => {
 
         getData('https://api.airtable.com/v0/appYosUeFMUaF80ZU/Todobase',
             { "Authorization": "Bearer " + process.env.REACT_APP_AIRTABLEKEY }
-            ,
-            [{field: "Todos", direction: "desc"}]
+            
         )
 
     }, [])
@@ -42,7 +42,7 @@ const Todos = () => {
                 { data && data.records.map((t) =>
 
                     <div className='col' key={ t.id }>
-                       <TodoCard todo={t} />
+                       <TodoCard t={t} />
                     </div>
 
                 ) }

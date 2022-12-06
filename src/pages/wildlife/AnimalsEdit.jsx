@@ -47,14 +47,14 @@ const AnimalsEdit = () => {
     const handleSubmit = (e) => {
         e.preventDefault()  //VIGTIG ved submit af form
 
-        let t = {
+        let w = {
             "fields": {
                 "Animal": updatedAnimal
             }
         }
 
         // send til hook som sender til API
-        patchData('https://api.airtable.com/v0/appEt2FPO3ormMpjQ/Wildlife/' + id, t,
+        patchData('https://api.airtable.com/v0/appEt2FPO3ormMpjQ/Wildlife/' + id, w,
             {
                 "Authorization": "Bearer " + process.env.REACT_APP_AIRTABLEKEY,
                 "Content-Type": "application/json"

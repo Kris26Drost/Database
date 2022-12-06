@@ -5,6 +5,7 @@ const TodoCard = ({t}) => {
         <div className='card h-100'>
             <div className='card-body'>
                 <h4>{ t.fields.Todos }</h4>
+                <p>{ t.fields.Category_name }</p>
                 <p>
                     { new Date(t.createdTime).toLocaleString("da-dk", { year: "numeric", month: "short", day: "numeric" }) }
                     &nbsp; kl. &nbsp;

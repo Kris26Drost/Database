@@ -23,15 +23,13 @@ const TodoAdmin = () => {
 
     getData('https://api.airtable.com/v0/appYosUeFMUaF80ZU/Todobase',
       { "Authorization": "Bearer " + process.env.REACT_APP_AIRTABLEKEY }
-      ,
-      [{ field: "Todos", direction: "desc" }]
     )
 
   }, [datadelete]) // lytter på ændringer i datadelete-state (fra og henter (nye) data ved ændringer)
 
+  
   // Kald hook og api og slet
   const handleDelete = (id) => {
-
 
     if (window.confirm("Er du sikke på at du vil slette?")) {
 
@@ -64,6 +62,7 @@ const TodoAdmin = () => {
             <div className='card h-100'>
               <div className='card-body'>
                 <h4>{ t.fields.Todos }</h4>
+                <p>{t.fields.Category_name}</p>
                 <p>
                   { new Date(t.createdTime).toLocaleString("da-dk", { year: "numeric", month: "short", day: "numeric" }) }
                   &nbsp; kl. &nbsp;

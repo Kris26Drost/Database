@@ -103,10 +103,6 @@ const Navbar = () => {
 
                 <li><hr className="dropdown-divider" /></li>
 
-                <li> <NavLink className="dropdown-item" to='/rettodo'>TodoEdit</NavLink> </li>
-
-                <li><hr className="dropdown-divider" /></li>
-
                 <li> <NavLink className="dropdown-item" to='/admintodo'>TodoAdmin</NavLink> </li>
               </ul>
             </li>
@@ -121,10 +117,6 @@ const Navbar = () => {
                 <li><hr className="dropdown-divider" /></li>
 
                 <li> <NavLink className="dropdown-item" to='/opretanimal'>CreateAnimal</NavLink> </li>
-
-                <li><hr className="dropdown-divider" /></li>
-
-                <li> <NavLink className="dropdown-item" to='/retanimal'>AnimalEdit</NavLink> </li>
 
                 <li><hr className="dropdown-divider" /></li>
 

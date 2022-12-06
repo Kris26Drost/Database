@@ -23,15 +23,13 @@ const AnimalsAdmin = () => {
 
     getData('https://api.airtable.com/v0/appEt2FPO3ormMpjQ/Wildlife',
       { "Authorization": "Bearer " + process.env.REACT_APP_AIRTABLEKEY }
-      ,
-      [{ field: "Animal", direction: "desc" }]
     )
 
   }, [datadelete]) // lytter på ændringer i datadelete-state (fra og henter (nye) data ved ændringer)
 
+  
   // Kald hook og api og slet
   const handleDelete = (id) => {
-
 
     if (window.confirm("Er du sikke på at du vil slette?")) {
 
@@ -58,23 +56,24 @@ const AnimalsAdmin = () => {
 
       <div className='row row-cols-1 row-cols-md4 g-2'>
 
-        { data && data.records.map((t) =>
+        { data && data.records.map((w) =>
 
-          <div className='col' key={ t.id }>
+          <div className='col' key={ w.id }>
             <div className='card h-100'>
               <div className='card-body'>
-                <h4>{ t.fields.Animal }</h4>
+                <h4>{ w.fields.Animal }</h4>
+                <p>{w.fields.Species_type}</p>
                 <p>
-                  { new Date(t.createdTime).toLocaleString("da-dk", { year: "numeric", month: "short", day: "numeric" }) }
+                  { new Date(w.createdTime).toLocaleString("da-dk", { year: "numeric", month: "short", day: "numeric" }) }
                   &nbsp; kl. &nbsp;
-                  { new Date(t.createdTime).toLocaleTimeString("da-dk", { hour: "2-digit", minute: "2-digit" }) }
+                  { new Date(w.createdTime).toLocaleTimeString("da-dk", { hour: "2-digit", minute: "2-digit" }) }
                 </p>
               </div>
               <div className='card-footer'>
                 {/* <button className='btn btn-warning'>RET</button>
                 <button onClick={ () => handleDelete(t.id) } className='btn btn-danger me-2'>SLET</button> */}
-                <Link to={'/retanimal/' + t.id}><AiOutlineEdit size='2em' /></Link>
-                <AiOutlineDelete onClick={ () => handleDelete(t.id) } style={ { cursor: 'pointer' } } size='2em' />
+                <Link to={'/retanimal/' + w.id}><AiOutlineEdit size='2em' /></Link>
+                <AiOutlineDelete onClick={ () => handleDelete(w.id) } style={ { cursor: 'pointer' } } size='2em' />
               </div>
             </div>
           </div>
