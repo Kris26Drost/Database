@@ -37,7 +37,7 @@ const Todos = () => {
 
 
 
-            <div className='row row-cols-1 row-cols-md4 g-2'>
+            <div className='row row-cols-1 row-cols-md-4 g-2'>
 
                 { data && data.records.map((t) =>
 
