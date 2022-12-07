@@ -15,6 +15,7 @@ const AnimalsCreate = () => {
     // state til at rumme ny todo (fra inputfelt)
     const [newanimal, setNewanimal] = useState() //skal være "" hvis controlled
     const [specie, setSpecie] = useState()
+    const [img, setImg] = useState()
 
     useEffect(() => {
         getData('https://api.airtable.com/v0/appEt2FPO3ormMpjQ/Specie',
@@ -47,6 +48,11 @@ const AnimalsCreate = () => {
         let ny = {
             "fields": {
                 "Animal": newanimal,
+                "Image": [
+                    {
+                        "url": img
+                    }
+                ],
                 "Species": [
                     specie
                 ]
@@ -102,6 +108,8 @@ const AnimalsCreate = () => {
                             </label>
                         </div>
 
+                          {/* Upload billede */ }
+                          <input type='text' onInput={ e => setNewanimal(e.target.value) } className='form-control ' />
 
                         <button type='submit' className='btn btn-primary'>Opret ny animal</button>
                     </form>

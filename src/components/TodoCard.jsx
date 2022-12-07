@@ -5,6 +5,9 @@ const TodoCard = ({t}) => {
         <div className='card h-100'>
             <div className='card-body'>
                 <h4>{ t.fields.Todos }</h4>
+                {
+                    t.fields.Image && <img src={t.fields.Image[0].url} width='100'/>
+                }
                 <p>{ t.fields.Category_name }</p>
                 <p>
                     { new Date(t.createdTime).toLocaleString("da-dk", { year: "numeric", month: "short", day: "numeric" }) }

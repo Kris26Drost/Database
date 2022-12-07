@@ -6,6 +6,7 @@ import Loader from '../../components/Loader'
 import { usePostData } from '../../hooks/usePostData'
 import { useGetData } from '../../hooks/useGetData'
 
+
 const TodoCreate = () => {
 
     // hook til post/opret data
@@ -15,12 +16,13 @@ const TodoCreate = () => {
     // state til at rumme ny todo (fra inputfelt)
     const [newtodo, setNewtodo] = useState() //skal være "" hvis controlled
     const [category, setCategory] = useState() //valg kategoriid fra dropwdown
+    const [img, setImg] = useState()
 
     useEffect(() => {
         getData('https://api.airtable.com/v0/appYosUeFMUaF80ZU/Category',
             { "Authorization": "Bearer " + process.env.REACT_APP_AIRTABLEKEY }
         )
-        
+
     }, [])
 
 
@@ -41,6 +43,11 @@ const TodoCreate = () => {
         let ny = {
             "fields": {
                 "Todos": newtodo,
+                "Image": [
+                    {
+                        "url": img
+                    }
+                ],
                 "Category": [
                     category
                 ]
@@ -97,6 +104,9 @@ const TodoCreate = () => {
                                 </select>
                             </label>
                         </div>
+
+                        {/* Upload billede */ }
+                        <input type='text' onInput={ e => setNewtodo(e.target.value) } className='form-control ' />
 
                         <button type='submit' className='btn btn-primary'>Opret ny todo</button>
                     </form>

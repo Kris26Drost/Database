@@ -26,7 +26,6 @@ const AnimalsEdit = () => {
                 "Authorization": "Bearer " + process.env.REACT_APP_AIRTABLEKEY,
                 "Content-Type": "application/json"
             }
-
         )
     }, [])
 

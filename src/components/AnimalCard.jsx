@@ -5,6 +5,9 @@ const AnimalCard = ({w}) => {
         <div className='card h-100'>
             <div className='card-body'>
                 <h4>{ w.fields.Animal }</h4>
+                {
+                    w.fields.Image && <img src={w.fields.Image[0].url} width='100'/>
+                }
                 <p>{w.fields.Species_type}</p>
                 <p>
                     { new Date(w.createdTime).toLocaleString("da-dk", { year: "numeric", month: "short", day: "numeric" }) }
