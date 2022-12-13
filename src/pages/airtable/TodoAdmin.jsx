@@ -9,7 +9,7 @@ import { AiOutlineEdit, AiOutlineDelete } from 'react-icons/ai'
 
 //import eget hook - som laver request til API
 import { useGetData } from '../../hooks/useGetData';
-// 
+// import eget hook - giver adgang til delete
 import { useDeleteData } from '../../hooks/useDeleteData';
 
 

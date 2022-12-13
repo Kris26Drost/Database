@@ -124,6 +124,40 @@ const Navbar = () => {
               </ul>
             </li>
 
+            <li className="nav-item dropdown">
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">PRODUCTS</span>
+
+              <ul className="dropdown-menu">
+
+                <li> <NavLink className="dropdown-item" to='/products'>Products</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/opretproduct'>CreateProduct</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/adminproduct'>ProductAdmin</NavLink> </li>
+              </ul>
+            </li>
+
+            <li className="nav-item dropdown">
+              <span className="nav-link dropdown-toggle" data-bs-toggle="dropdown">HAVE-SERVICES</span>
+
+              <ul className="dropdown-menu">
+
+                <li> <NavLink className="dropdown-item" to='/haveservices'>Haveservices</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/oprethaveservice'>CreateHaveservice</NavLink> </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                <li> <NavLink className="dropdown-item" to='/adminhaveservice'>AdminHaveservice</NavLink> </li>
+              </ul>
+            </li>
+
 
 
           </ul>

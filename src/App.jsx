@@ -31,6 +31,16 @@ import AnimalsAdmin from './pages/wildlife/AnimalsAdmin';
 import AnimalsCreate from './pages/wildlife/AnimalsCreate';
 import AnimalsEdit from './pages/wildlife/AnimalsEdit';
 
+import Products from './pages/backendapi/Products';
+import ProductsAdmin from './pages/backendapi/ProductsAdmin';
+import ProductsAdminCreate from './pages/backendapi/ProductsAdminCreate';
+import ProductsAdminEdit from './pages/backendapi/ProductsAdminEdit';
+
+import Haveservices from './pages/haveservices/Haveservices';
+import HaveservicesAdmin from './pages/haveservices/HaveservicesAdmin';
+import HaveservicesAdminCreate from './pages/haveservices/HaveservicesAdminCreate';
+import HaveservicesAdminEdit from './pages/haveservices/HaveservicesAdminEdit';
+
 
 function App() {
   return (
@@ -69,6 +79,16 @@ function App() {
           <Route path='/opretanimal' element={<AnimalsCreate/>}/>
           <Route path='/retanimal/:id' element={<AnimalsEdit/>}/>
           <Route path='/adminanimal' element={<AnimalsAdmin/>}/>
+
+          <Route path='/products' element={<Products/>}/>
+          <Route path='/opretproduct' element={<ProductsAdminCreate/>}/>
+          <Route path='/retproduct/:id' element={<ProductsAdminEdit/>}/>
+          <Route path='/adminproduct' element={<ProductsAdmin/>}/>
+
+          <Route path='/haveservices' element={<Haveservices/>}/>
+          <Route path='/oprethaveservice' element={<HaveservicesAdminCreate/>}/>
+          <Route path='/rethaveservice/:id' element={<HaveservicesAdminEdit/>}/>
+          <Route path='/adminhaveservice' element={<HaveservicesAdmin/>}/>
 
 
           <Route path='*' element={<NotMatch/>} />
